@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MangaCloud | Kullanıcı Sözleşmesi</title>
+
+<meta name="description" content="MangaCloud Kullanıcı Sözleşmesi. Platform kullanım şartları ve yasal bilgiler.">
+<meta name="keywords" content="MangaCloud, kullanıcı sözleşmesi, manga platformu">
+<meta name="author" content="MangaCloud">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#0f0f0f;
+  color:#fff;
+  line-height:1.7;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.gradient-title{
+  font-size:2.5rem;
+  font-weight:700;
+  background:linear-gradient(90deg,#7c3aed,#9333ea);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-align:center;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  text-align:center;
+  opacity:0.7;
+  margin-bottom:40px;
+}
+
+.card{
+  background:rgba(255,255,255,0.04);
+  backdrop-filter:blur(12px);
+  border-radius:16px;
+  padding:30px;
+  margin-bottom:25px;
+  box-shadow:0 0 25px rgba(124,58,237,0.15);
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
+}
+
+.card.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.card h2{
+  color:#9333ea;
+  margin-bottom:10px;
+}
+
+.card p, .card ul{
+  font-size:0.95rem;
+  opacity:0.85;
+}
+
+.card ul{
+  margin-left:20px;
+  margin-top:10px;
+}
+
+footer{
+  text-align:center;
+  padding:30px 10px;
+  opacity:0.6;
+  font-size:0.85rem;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+
+footer a{
+  color:#9333ea;
+  text-decoration:none;
+}
+
+.back-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 20px;
+  border-radius:8px;
+  background:linear-gradient(90deg,#7c3aed,#9333ea);
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.back-btn:hover{
+  opacity:0.8;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1 class="gradient-title">Kullanıcı Sözleşmesi</h1>
+<p class="subtitle">Son Güncelleme: 2026</p>
+
+<div class="card">
+<h2>1. Taraflar</h2>
+<p>Bu sözleşme, MangaCloud platformu ile platformu kullanan kullanıcı arasında akdedilmiştir.</p>
+</div>
+
+<div class="card">
+<h2>2. Hizmet Tanımı</h2>
+<p>MangaCloud, dijital manga içerikleri sunmayı ve kullanıcılara dijital deneyim sağlamayı amaçlayan bir platformdur.</p>
+</div>
+
+<div class="card">
+<h2>3. Kullanım Koşulları</h2>
+<ul>
+<li>Gerçeğe aykırı bilgi verilmemelidir.</li>
+<li>Platform hukuka aykırı amaçla kullanılamaz.</li>
+<li>Spam veya saldırı girişiminde bulunulamaz.</li>
+<li>Diğer kullanıcıları rahatsız edici davranışlarda bulunulamaz.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>4. Fikri Mülkiyet</h2>
+<p>Platform tasarımı, logo ve yazılım hakları MangaCloud’a aittir. İzinsiz kullanım yasaktır.</p>
+</div>
+
+<div class="card">
+<h2>5. Sorumluluk Sınırlandırması</h2>
+<p>Teknik aksaklıklar veya üçüncü taraf servis hatalarından doğabilecek zararlardan MangaCloud sorumlu tutulamaz.</p>
+</div>
+
+<div class="card">
+<h2>6. Hesap Sonlandırma</h2>
+<p>Kullanıcı sözleşmeye aykırı davranışlarda bulunduğu takdirde hesabı askıya alınabilir veya silinebilir.</p>
+</div>
+
+<div class="card">
+<h2>7. Uyuşmazlık Çözümü</h2>
+<p>Uyuşmazlıklarda Türkiye Cumhuriyeti kanunları uygulanır.</p>
+</div>
+
+<a href="index.html" class="back-btn">Ana Sayfaya Dön</a>
+
+</div>
+
+<footer>
+© 2026 MangaCloud. Tüm hakları saklıdır.
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', ()=>{
+  const triggerBottom = window.innerHeight * 0.85;
+
+  cards.forEach(card=>{
+    const cardTop = card.getBoundingClientRect().top;
+    if(cardTop < triggerBottom){
+      card.classList.add('visible');
+    }
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MangaCloud | Telif Hakları</title>
+
+<meta name="description" content="MangaCloud Telif Hakları ve Kullanım Bildirimi. Web sitesi tasarımı ve kaynak kodların korunması hakkında bilgiler.">
+<meta name="keywords" content="MangaCloud, telif hakları, copyright, kaynak kod koruma">
+<meta name="author" content="MangaCloud">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#0f0f0f;
+  color:#fff;
+  line-height:1.7;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.gradient-title{
+  font-size:2.5rem;
+  font-weight:700;
+  background:linear-gradient(90deg,#7c3aed,#9333ea);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-align:center;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  text-align:center;
+  opacity:0.7;
+  margin-bottom:40px;
+}
+
+.card{
+  background:rgba(255,255,255,0.04);
+  backdrop-filter:blur(12px);
+  border-radius:16px;
+  padding:30px;
+  margin-bottom:25px;
+  box-shadow:0 0 25px rgba(124,58,237,0.15);
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
+}
+
+.card.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.card h2{
+  color:#9333ea;
+  margin-bottom:10px;
+}
+
+.card p, .card ul{
+  font-size:0.95rem;
+  opacity:0.85;
+}
+
+.card ul{
+  margin-left:20px;
+  margin-top:10px;
+}
+
+footer{
+  text-align:center;
+  padding:30px 10px;
+  opacity:0.6;
+  font-size:0.85rem;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+
+.back-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 20px;
+  border-radius:8px;
+  background:linear-gradient(90deg,#7c3aed,#9333ea);
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.back-btn:hover{
+  opacity:0.8;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1 class="gradient-title">Telif Hakları ve Kullanım Bildirimi</h1>
+<p class="subtitle">Son Güncelleme: 2026</p>
+
+<div class="card">
+<h2>1. Genel Bilgilendirme</h2>
+<p>MangaCloud web sitesi tasarımı, kullanıcı arayüzü (UI), yazılım altyapısı, HTML/CSS kod yapısı, görsel düzeni, logo ve marka unsurları 5846 sayılı Fikir ve Sanat Eserleri Kanunu kapsamında korunmaktadır.</p>
+</div>
+
+<div class="card">
+<h2>2. Koruma Kapsamı</h2>
+<p>Aşağıdaki unsurlar telif hakkı kapsamındadır:</p>
+<ul>
+<li>Web sitesi tasarımı ve arayüz yapısı</li>
+<li>HTML, CSS ve JavaScript kaynak kodları</li>
+<li>Özgün yazılım mimarisi</li>
+<li>Grafik tasarım ve görsel düzen</li>
+<li>MangaCloud adı ve logosu</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>3. Yasaklanan Kullanımlar</h2>
+<ul>
+<li>Kaynak kodların kopyalanması veya çoğaltılması</li>
+<li>Tasarımın taklit edilmesi</li>
+<li>İzinsiz ticari kullanım</li>
+<li>Reverse engineering (tersine mühendislik)</li>
+<li>Marka ve logo izinsiz kullanımı</li>
+</ul>
+<p>Bu işlemler açık yazılı izin olmaksızın yasaktır.</p>
+</div>
+
+<div class="card">
+<h2>4. İhlal Durumunda</h2>
+<p>Yetkisiz kullanım tespit edilmesi halinde;</p>
+<ul>
+<li>İçerik kaldırma talebi (DMCA)</li>
+<li>Hosting sağlayıcıya resmi bildirim</li>
+<li>Hukuki süreç başlatılması</li>
+</ul>
+<p>hakları saklıdır.</p>
+</div>
+
+<div class="card">
+<h2>5. Marka Koruması</h2>
+<p>“MangaCloud” adı ve logosu marka koruması altındadır. İzinsiz kullanımı yasaktır.</p>
+</div>
+
+<div class="card">
+<h2>6. İletişim</h2>
+<p>Telif hakları ile ilgili başvurular için:</p>
+<p><strong>mangacloudofficial@gmail.com</strong></p>
+</div>
+
+<a href="index.html" class="back-btn">Ana Sayfaya Dön</a>
+
+</div>
+
+<footer>
+© 2026 MangaCloud. Tüm hakları saklıdır.
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', ()=>{
+  const triggerBottom = window.innerHeight * 0.85;
+
+  cards.forEach(card=>{
+    const cardTop = card.getBoundingClientRect().top;
+    if(cardTop < triggerBottom){
+      card.classList.add('visible');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
