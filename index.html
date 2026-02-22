@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MangaCloud Ön Kayıt</title>
+
+<!-- SEO Meta -->
+<meta name="description" content="MangaCloud ön kayıt başladı. Yeni nesil dijital manga deneyimine ilk katılanlardan ol.">
+<meta name="keywords" content="manga, manga platformu, dijital manga, manga ön kayıt">
+<meta name="author" content="MangaCloud">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#0f0f0f;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:20px;
+  animation:fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+.hero{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.hero h1{
+  font-size:2rem;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.hero p{
+  opacity:0.8;
+  margin-bottom:10px;
+}
+
+.badge-text{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  font-size:0.9rem;
+}
+
+.form-card{
+  width:100%;
+  max-width:500px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(15px);
+  border-radius:16px;
+  padding:25px;
+  box-shadow:0 0 25px rgba(124,58,237,0.2);
+  margin-bottom:30px;
+}
+
+input, textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:none;
+  background:rgba(255,255,255,0.1);
+  color:white;
+  outline:none;
+}
+
+input:focus, textarea:focus{
+  border:1px solid #7c3aed;
+}
+
+.checkbox-group{
+  font-size:0.85rem;
+  margin-bottom:15px;
+}
+
+.checkbox-group label{
+  display:block;
+  margin-bottom:8px;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+  background:linear-gradient(90deg,#7c3aed,#9333ea);
+  color:white;
+  transition:0.3s;
+  opacity:0.6;
+}
+
+button.enabled{
+  opacity:1;
+}
+
+button:disabled{
+  cursor:not-allowed;
+}
+
+.success-message{
+  display:none;
+  text-align:center;
+  margin-top:15px;
+  color:#7c3aed;
+  animation:fadeIn 0.6s ease-in;
+}
+
+.accordion{
+  width:100%;
+  max-width:500px;
+  margin-bottom:30px;
+}
+
+.accordion-header{
+  padding:15px;
+  background:rgba(255,255,255,0.05);
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.accordion-header:hover{
+  background:rgba(124,58,237,0.2);
+}
+
+.accordion-content{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.4s ease;
+  background:rgba(255,255,255,0.03);
+  padding:0 15px;
+  border-radius:0 0 10px 10px;
+  font-size:0.85rem;
+}
+
+.accordion-content.open{
+  padding:15px;
+}
+
+footer{
+  text-align:center;
+  font-size:0.8rem;
+  opacity:0.7;
+}
+
+footer a{
+  color:#9333ea;
+  text-decoration:none;
+  margin:0 5px;
+}
+
+@media(min-width:768px){
+  .hero h1{
+    font-size:2.5rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1>MangaCloud Ön Kayıt Başladı</h1>
+  <p>Yeni nesil dijital manga deneyimine ilk sen katıl.</p>
+  <div class="badge-text">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#cd7f32">
+      <circle cx="12" cy="8" r="4"/>
+      <path d="M6 22L12 17L18 22V12H6V22Z"/>
+    </svg>
+    Ön kayıt olan kullanıcılara özel Bronz Rozet fırsatı.
+  </div>
+</section>
+
+<section class="form-card">
+<form id="registrationForm" action="https://formsubmit.co/mangacloudofficial@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="MangaCloud Ön Kayıt">
+<input type="hidden" name="_template" value="table">
+
+<input type="text" name="Full Name" placeholder="Ad Soyad" required>
+
+<input type="text" id="instagram" name="Instagram Username" placeholder="@kullaniciadi" required>
+
+<input type="email" name="Email" placeholder="E-posta Adresi" required>
+
+<textarea name="Özellikler" placeholder="Eklenmesini istediğiniz özellikler" required></textarea>
+
+<div class="checkbox-group">
+<label><input type="checkbox" required> Kullanıcı Sözleşmesini okudum ve kabul ediyorum.</label>
+<label><input type="checkbox" required> Gizlilik Politikasını okudum ve kabul ediyorum.</label>
+<label><input type="checkbox" required> KVKK Aydınlatma Metnini okudum ve kabul ediyorum.</label>
+</div>
+
+<div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+
+<button type="submit" id="submitBtn" disabled>Ön Kayıt Ol</button>
+
+<div class="success-message" id="successMessage">
+Kaydınız alınmıştır. MangaCloud yakında sizinle!
+</div>
+
+</form>
+</section>
+
+<section class="accordion">
+<div class="accordion-header" onclick="toggleAccordion()">
+Kişisel Verilerin Korunması Kanunu (KVKK) Aydınlatma Metni
+</div>
+<div class="accordion-content" id="accordionContent">
+<p>6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında hazırlanmıştır.</p>
+<p><strong>Veri sorumlusu:</strong> MangaCloud</p>
+<p><strong>İşlenen veriler:</strong> Ad Soyad, Instagram kullanıcı adı, E-posta adresi</p>
+<p><strong>İşleme amacı:</strong> Ön kayıt işlemleri, erken erişim bilgilendirmesi</p>
+<p><strong>Hukuki sebep:</strong> Açık rıza (KVKK Madde 5/1)</p>
+<p><strong>Saklama süresi:</strong> Ön kayıt süreci boyunca</p>
+<p>Veri güvenliği sağlanmaktadır.</p>
+<p><strong>Kullanıcının hakları (KVKK Madde 11):</strong></p>
+<ul>
+<li>Veri işlenip işlenmediğini öğrenme</li>
+<li>İşlenen verileri talep etme</li>
+<li>Düzeltme isteme</li>
+<li>Silme isteme</li>
+<li>İşlemeye itiraz etme</li>
+</ul>
+<p><strong>Başvuru e-posta adresi:</strong> mangacloudofficial@gmail.com</p>
+<p><strong>Verileriniz üçüncü kişilerle paylaşılmaz ve yalnızca belirtilen amaç doğrultusunda kullanılacaktır.</strong></p>
+</div>
+</section>
+
+<footer>
+© 2026 MangaCloud. Tüm hakları saklıdır.<br>
+<a href="kullanacisözlesmesi.html">Kullanıcı Sözleşmesi</a> |
+<a href="gizlilikpolitikasi.html">Gizlilik Politikası</a> |
+<a href="telifhakki.html">Telif hakkımız</a>
+<a href="https://instagram.com/mangacloudresmi" target="_blank">Instagram</a>
+</footer>
+
+<script>
+const form = document.getElementById("registrationForm");
+const submitBtn = document.getElementById("submitBtn");
+const successMessage = document.getElementById("successMessage");
+
+form.addEventListener("input", ()=>{
+  if(form.checkValidity()){
+    submitBtn.disabled=false;
+    submitBtn.classList.add("enabled");
+  } else {
+    submitBtn.disabled=true;
+    submitBtn.classList.remove("enabled");
+  }
+});
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+  successMessage.style.display="block";
+  form.reset();
+  submitBtn.disabled=true;
+});
+
+function toggleAccordion(){
+  const content=document.getElementById("accordionContent");
+  if(content.style.maxHeight){
+    content.style.maxHeight=null;
+    content.classList.remove("open");
+  }else{
+    content.style.maxHeight=content.scrollHeight+"px";
+    content.classList.add("open");
+  }
+}
+</script>
+
+</body>
+</html>
